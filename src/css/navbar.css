@@ -1,0 +1,69 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--box-bg-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sitelogo {
+    width: 25px;
+    display: inline-flex;
+    margin-right: 0;
+}
+
+.link-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    padding: 0.185rem 1.45rem;
+    margin: 0 0.5rem;
+    transition: all var(--transition-speed) ease-in-out;
+    cursor: pointer;
+    border: 2px solid rgba(133, 133, 133, 0.226);
+}
+
+.link-wrapper:hover .linkarrow {
+    transform: translateX(5px);
+}
+
+.theme-switcher {
+    position: relative; /* Adjusted from absolute to relative */
+    transform: none; /* Remove translation */
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--theme-switcher-color);
+    font-size: 1.5rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.theme-toggle-btn:hover {
+    color: var(--theme-switcher-hover-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 580px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .theme-switcher {
+        margin-top: 15px;
+    }
+
+    .link-wrapper {
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+    .theme-switcher {
+        position: relative; /* Keep the switcher within the flow */
+        left: 0; /* Remove left positioning */
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "privnote/zuauzsuzfadda",
+  "autoload": {
+    "psr-4": {
+      "Privnote\\Zuauzsuzfadda\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "push42",
+      "email": "thiesmk2@gmail.com"
+    }
+  ],
+  "require": {}
+}

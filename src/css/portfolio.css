@@ -1,0 +1,82 @@
+.portfolio-container {
+    background: url('./assets/images/bg2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-header h1 {
+    font-size: 2.5rem;
+    color: #e67194;
+}
+
+.portfolio-header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This ensures that the content is spaced out */
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.portfolio-content {
+    padding: 15px;
+    margin-top: auto; /* Pushes the content to the bottom */
+}
+
+.portfolio-link {
+    display: inline-block;
+    background-color: #8088f8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-link:hover {
+    background-color: #e67194;
+}
+
+/* Add any additional custom styles that Tailwind doesn't cover */
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-image-banner {
+    height: auto; /* Adjust the height automatically based on width */
+    aspect-ratio: 16 / 9; /* Example aspect ratio for banners */
+}
+
+/* For avatars or logos, you might want to keep them square */
+.portfolio-image-avatar {
+    height: auto;
+    aspect-ratio: 1; /* Square aspect ratio */
+}

@@ -1,0 +1,77 @@
+# .gitignore
+
+# Ignore system files
+*.log
+*.cache
+*.DS_Store
+*.Thumbs.db
+
+# Ignore PHP vendor directory
+/vendor/
+
+# Ignore Node modules
+/node_modules/
+
+# Ignore user-specific files
+*.sublime*
+*.idea*
+*.vscode*
+*.atom*
+
+# Ignore environment variables
+.env
+
+# Ignore Composer's .lock file
+composer.lock
+
+# Ignore public assets
+/public/assets/
+
+# Ignore sitemap
+/sitemap.xml
+
+# Ignore PHPStorm project files
+.idea/
+
+# Ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# Ignore Archive files
+*.7z
+*.zip
+*.gz
+*.rar
+*.tar
+
+# Ignore log and databases files
+*.log
+*.sql
+*.sqlite
+
+# Ignore PHP compiled files, but keep pdfs
+*.pdf
+
+# Ignore certificates
+*.pem
+
+# Ignore configuration files
+config.php
+settings.php
+
+# Ignore everything in the "uploads" directory
+/uploads/
+
+# Ignore everything in the "sessions" directory
+/sessions/
+
+# Ignore everything in the "logs" directory
+/logs/
+
+# Ignore everything in the "cache" directory
+/cache/
+
+# Ignore everything that is my private work
+/src/assets/work/*
+/src/assets/videos/p42_pausemenu.mp4
+/src/assets/images/*

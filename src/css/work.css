@@ -1,0 +1,58 @@
+.group {
+  display: flex;
+  align-items: center;
+  /* Align items vertically in the center */
+  padding: 1rem;
+  /* Consistent padding */
+}
+
+.image-container {
+  flex-shrink: 0;
+  /* Prevent image container from shrinking */
+  width: 100px;
+  /* Fixed width for image container */
+  height: 100px;
+  /* Fixed height for image container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  /* Space between image and content */
+}
+
+.card-image {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  /* Ensure image aspect ratio is maintained */
+  border-radius: var(--border-radius);
+}
+
+.card-content {
+  flex-grow: 1;
+  /* Let content take up remaining space */
+}
+
+.see-more-btn {
+  display: inline-block;
+  background-color: #252525a1;
+  color: var(--btn-text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  margin-top: 0.5rem;
+  /* Space between text and button */
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-container {
+    margin-bottom: 0.5rem;
+    /* Space between image and content on smaller screens */
+  }
+}
