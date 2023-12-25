@@ -19,7 +19,7 @@
 
 ## Connect with Me
 
-[![Discord](https://img.shields.io/badge/Discord-push.42-blue?style=flat-square&logo=discord)](your-discord-link)
+[![Discord](https://img.shields.io/badge/Discord-push.42-blue?style=flat-square&logo=discord)](https://discord.com/users/265908049707925504)
 
 ## License
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
