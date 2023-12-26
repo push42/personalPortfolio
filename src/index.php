@@ -93,6 +93,9 @@ require '../vendor/autoload.php';
 
     <!-- Material Tailwind Ripple Effect -->
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 
@@ -101,14 +104,15 @@ require '../vendor/autoload.php';
 
 
     <!-- ========= Image Preview Modal (Clicked on Image) ========= -->
-    <div id="myModal" class="ImageModal hidden fixed inset-0 z-10 overflow-auto bg-black bg-opacity-60 backdrop-blur">
-        <div class="modal-content mx-auto p-6 bg-gardient-to-r from-white via-gray-100 to-zinc-300 bg-opacity-80 rounded-2xl shadow-lg max-w-4xl">
-            <span class="close absolute top-3 right-3 text-gray-200 text-3xl font-semibold cursor-pointer hover:text-gray-400">&times;</span>
-
-            <div class="text-xl font-semibold text-white mb-2 text-center">Vorschau</div>
-            <img id="img01" class="mx-auto my-4 max-w-full h-auto rounded-lg shadow-sm">
+    <div id="myModal" class="ImageModal hidden fixed inset-0 z-10 overflow-auto bg-black bg-opacity-70 backdrop-blur-md">
+        <div class="modal-content mx-auto p-6 bg-gradient-to-bl from-zinc-900 to-black rounded-3xl shadow-2xl max-w-6xl flex items-center justify-center relative">
+            <span class="close absolute top-1 right-2 text-white text-3xl font-semibold cursor-pointer hover:text-gray-500">&times;</span>
+            <img id="img01" class="mx-auto my-4 max-w-full h-auto rounded-lg shadow-lg transition-all duration-300 ease-in-out">
         </div>
-    </div><!-- ========= Image Preview Modal End ========= -->
+    </div>
+    <!-- ========= Image Preview Modal End ========= -->
+
+
 
 
 
@@ -200,7 +204,7 @@ require '../vendor/autoload.php';
                 <!-- <span class="animate-ping absolute w-24 h-24 inline-flex border-2 rounded-full border-purple-400 opacity-75 right-1 top-1"></span> -->
                 <span class="animate-ping absolute w-16 h-16 inline-flex border-2 rounded-full border-purple-400 opacity-75 right-5 top-4"></span>
                 <img src="./assets/images/p42_normal.png" alt="Logo" class="aboutImg rounded-full mx-auto">
-                <p class="text-xl font-semibold">@Thies</p>
+                <p class="text-xl font-semibold">Thies</p>
             </div>
             <div class="welcomeMessage text-center text-transparent bg-clip-text bg-gradient-to-tr from-[#cecece] to-[#3d3d3d] text-lg font-semibold">
             </div>
@@ -689,75 +693,24 @@ require '../vendor/autoload.php';
 
 
 
-        <div class="worklink-box space-y-8" data-aos="fade-up" data-aos-duration="1000">
-            <div class="mb-5 max-w-sm flex-col px-4 py-6 shadow-2xl">
-                <div class="text-center">
-                    <img class="rounded-full mt-8" alt="profile pic" src="./assets/images/p42_normal.png" />
 
-                    <p class="pt-2 text-lg font-medium">@<span class="text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194]">Thies Bergenthal</span>
-                    </p>
-                    <p class="text-sm font-medium">🪄 I create Stuff</p>
+        <div class="worklink-box space-y-8 z-10 relative" data-aos="fade-up" data-aos-duration="1000">
+            <div class="profile-card mb-5 max-w-lg mx-auto flex flex-col items-center px-4 py-6">
+                <div class="avatar-container">
+                    <img class="profile-pic rounded-full shadow-lg transition duration-500 hover:scale-105" src="./assets/images/p42_normal.png" alt="profile pic" />
                 </div>
-                <!-- <div class="my-3 grid grid-cols-5 items-center gap-4 px-4">
 
-                    <a href="#">
-                        <button class="fixed sticky h-12 w-12 transform rounded-full bg-transparent text-2xl duration-500 hover:-translate-y-3">
-                            <img class="w-8" alt="profile pic" src="./assets/images/github.png" />
-                        </button>
-                    </a>
+                <h2 class="username mt-4 text-2xl font-bold text-white transition duration-500 hover:text-purple-500">@Thies Bergenthal</h2>
+                <p class="tagline text-sm font-medium text-gray-300 mt-1">🪄 I love to create Stuff</p>
 
-                    <a href="#">
-                        <button class="fixed sticky h-12 w-12 transform rounded-full bg-transparent text-2xl duration-500 hover:-translate-y-3">
-                            <img class="w-8" alt="profile pic" src="./assets/images/telegram.png" />
-                        </button>
-                    </a>
-
-                    <a href="#">
-                        <button class="fixed sticky h-12 w-12 transform rounded-full bg-transparent text-2xl duration-500 hover:-translate-y-3">
-                            <img class="w-8" alt="profile pic" src="./assets/images/facebook.png" />
-                        </button>
-                    </a>
-
-                    <a href="#">
-                        <button class="fixed sticky h-12 w-12 transform rounded-full bg-transparent text-2xl duration-500 hover:-translate-y-3">
-                            <img class="w-8" alt="profile pic" src="./assets/images/behance.png" />
-                        </button>
-                    </a>
-
-                    <a href="#">
-                        <button class="fixed sticky h-12 w-12 transform rounded-full bg-transparent text-2xl duration-500 hover:-translate-y-3">
-                            <img class="w-8" alt="profile pic" src="./assets/images/linkedin.png" />
-                        </button>
-                    </a>
-                </div> -->
-
-                <!-- <a href="#">
-                    <div class="my-2 flex h-16 items-center justify-between rounded-lg border-2 border-b-4 border-l-4 border-zinc-700 px-4 shadow-xl kofidonation mt-8">
-                        <div class="flex items-center">
-                            <img alt="photo" class="w-10" src="./assets/images/kofi.png" />
-                            <div class="ml-2">
-                                <div class="text-xs font-semibold">S</div>
-                                <div class="flex text-xs font-light text-gray-600">
-                                    Ko-Fi.com<svg class="h-3 w-3 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z">
-                                        </path>
-                                        <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-
-                        </div>
-                    </div>
-                </a> -->
-
-
-
-
+                <button id="contactButton" class="contact-btn mt-6 px-6 py-3 bg-gradient-to-r from-[#8088f8] to-[#e67194] font-bold text-white rounded-full transition duration-500 hover:bg-purple-700">
+                    Let's Collaborate!
+                </button>
             </div>
         </div>
+
+
+
 
 
         <div id="currentProjectsbox" class="currentProjectsbox drop-shadow-[0_35px_35px_rgba(189,122,188,0.25)]" data-aos="fade-up" data-aos-duration="1000">
@@ -872,6 +825,96 @@ require '../vendor/autoload.php';
                         Einige meiner <span class="text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194]">Arbeiten.</span></h1>
 
                     <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+                        <div class="lg:flex">
+                            <div class="portImage relative">
+                                <a href="#none">
+                                    <i class="fa-solid fa-up-right-and-down-left-from-center absolute top-4 right-4 z-50"></i>
+                                    <img class="object-cover w-full h-56 rounded-lg lg:w-64 workIMG" src="./assets/work/websites/partyservice.png" alt="">
+                                </a>
+                            </div>
+                            <div class="flex flex-col py-6 lg:mx-6">
+                                <a href="#" class="text-xl font-semibold text-gray-800 dark:text-white ">
+                                    <span class="text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194]">Schmidt</span>
+                                    Partyservice
+                                </a>
+                                <span class="text-sm text-gray-500 dark:text-gray-300 mb-2 myWorkDescription">Catering Service Website</span>
+                                <!-- component -->
+                                <div class="buttonSpacerText mb-2 mt-1 text-sm font-medium text-gray-300">Verwendete Sprachen
+                                </div>
+                                <div class="flex">
+                                    <!-- <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-900 to-yellow-400 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-yellow-500/20 transition-all hover:shadow-lg hover:yellow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                        <img src="./assets/images/js.png" alt="" class="w-6 h-6">
+                                    </button> -->
+                                    <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-orange-500/20 transition-all hover:shadow-lg hover:orange-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                        <img src="./assets/images/html.png" alt="" class="w-6 h-6">
+                                    </button>
+                                    <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-300/20 transition-all hover:shadow-lg hover:blue-pink-300/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                        <img src="./assets/images/css.png" alt="" class="w-6 h-6">
+                                    </button>
+                                    <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-yellow-500/20 transition-all hover:shadow-lg hover:yellow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                        <img src="./assets/images/js.png" alt="" class="w-6 h-6">
+                                    </button>
+                                    <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-yellow-500/20 transition-all hover:shadow-lg hover:yellow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                        <img src="./assets/images/php.png" alt="" class="w-6 h-6">
+                                    </button>
+                                </div>
+                                <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
+                                    <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                                        <i class="fa fa-github text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
+                                        Source Code ist privat
+                                    </button>
+                                    <button onclick="window.location.href = 'https://schmidt-partyservice.de';" class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                                        <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
+                                        Live Preview Website
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:flex">
+                            <div class="portImage relative">
+                                <a href="#none">
+                                    <i class="fa-solid fa-up-right-and-down-left-from-center absolute top-4 right-4 z-50"></i>
+                                    <img class="object-cover w-full h-56 rounded-lg lg:w-64 workIMG" src="./assets/work/websites/partyservice_dashboard.png" alt="">
+                                </a>
+                            </div>
+                            <div class="flex flex-col py-6 lg:mx-6">
+                                <a href="#" class="text-xl font-semibold text-gray-800 dark:text-white ">
+                                    <span class="text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194]">Schmidt</span>
+                                    Partyservice
+                                </a>
+                                <span class="text-sm text-gray-500 dark:text-gray-300 mb-2 myWorkDescription">Administrations Dashboard</span>
+                                <!-- component -->
+                                <div class="buttonSpacerText mb-2 mt-1 text-sm font-medium text-gray-300">Verwendete Sprachen
+                                </div>
+                                <div class="flex">
+                                    <!-- <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-900 to-yellow-400 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-yellow-500/20 transition-all hover:shadow-lg hover:yellow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                        <img src="./assets/images/js.png" alt="" class="w-6 h-6">
+                                    </button> -->
+                                    <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-orange-500/20 transition-all hover:shadow-lg hover:orange-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                        <img src="./assets/images/html.png" alt="" class="w-6 h-6">
+                                    </button>
+                                    <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-300/20 transition-all hover:shadow-lg hover:blue-pink-300/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                        <img src="./assets/images/css.png" alt="" class="w-6 h-6">
+                                    </button>
+                                    <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-yellow-500/20 transition-all hover:shadow-lg hover:yellow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                        <img src="./assets/images/js.png" alt="" class="w-6 h-6">
+                                    </button>
+                                    <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-yellow-500/20 transition-all hover:shadow-lg hover:yellow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                        <img src="./assets/images/php.png" alt="" class="w-6 h-6">
+                                    </button>
+                                </div>
+                                <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
+                                    <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                                        <i class="fa fa-github text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
+                                        Source Code ist privat
+                                    </button>
+                                    <button onclick="window.location.href = 'https://schmidt-partyservice.de';" class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                                        <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
+                                        Live Preview Website
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                         <div class="lg:flex">
                             <div class="portImage relative">
                                 <a href="#none">
@@ -1176,19 +1219,40 @@ require '../vendor/autoload.php';
     var modal = document.getElementById('myModal');
     var images = document.querySelectorAll('.workIMG');
     var modalImg = document.getElementById('img01');
-    var captionText = document.getElementById('caption');
+    var closeModal = document.querySelector('.close');
+
+    // Function to open the modal with Animate.css
+    function openModal(imageSrc) {
+        modal.classList.remove('hidden', 'animate__animated', 'animate__fadeOut');
+        modal.classList.add('active', 'animate__animated', 'animate__fadeIn');
+        modalImg.src = imageSrc;
+    }
+
+    // Function to close the modal with Animate.css
+    function closeModalFunction() {
+        modal.classList.add('animate__fadeOut');
+        setTimeout(() => {
+            modal.classList.remove('active', 'animate__animated', 'animate__fadeIn', 'animate__fadeOut');
+            modal.classList.add('hidden');
+        }, 800); // Duration of the fade out animation
+    }
 
     images.forEach(img => {
         img.onclick = function() {
-            modal.classList.remove('hidden');
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
+            openModal(this.src);
+        };
     });
 
-    document.querySelector('.close').onclick = function() {
-        modal.classList.add('hidden');
-    }
+    closeModal.onclick = closeModalFunction;
+
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            closeModalFunction();
+        }
+    };
+
+
+
 
 
 
@@ -1300,13 +1364,13 @@ require '../vendor/autoload.php';
     });
 
     // Function to close the modal
-    function closeModal() {
+    function closeNotifyModal() {
         var modal = document.querySelector('#notifyBanner'); // Select the modal element
         modal.style.display = 'none'; // Hide the modal
     }
 
     // Add a click event listener to the close button
-    document.getElementById('closeBanner').addEventListener('click', closeModal);
+    document.getElementById('closeBanner').addEventListener('click', closeNotifyModal);
 
     $('.counter').counterUp();
     </script>

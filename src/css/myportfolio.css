@@ -1,65 +1,54 @@
-.modal-content {
-  width: 90%;
-  /* Adjust width for mobile */
-  max-width: none;
-  /* Remove max-width constraint */
-  margin: 10% auto;
-  /* Centering with some top margin */
-  transform: translateY(-50%);
-  /* Center vertically */
-  box-shadow:
-    0 10px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  /* Soft shadow */
-}
-
 .ImageModal {
-  backdrop-filter: blur(5px);
-  /* Adding more blur to the backdrop */
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: backdrop-filter 0.5s ease;
 }
 
-@media (min-width: 240px) {
-  /* Adjust for small tablets and large mobiles */
-  .modal-content {
-    max-width: 80%;
-    margin-top: 390px;
-    /* Fixed margin instead of percentage */
-  }
+.modal-content {
+  transition: all 0.5s ease-in-out;
+  max-width: 100%;
+  width: auto;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
 }
 
-@media (min-width: 768px) {
-  /* Adjust for tablets */
-  .modal-content {
-    max-width: 70%;
-  }
-}
-
-@media (min-width: 1024px) {
-  /* Adjust for laptops and desktops */
-  .modal-content {
-    max-width: 60%;
-    margin-top: 390px;
-  }
-}
-
-@media (min-width: 1280px) {
-  /* Larger desktops */
-  .modal-content {
-    max-width: 50%;
-    margin-top: 390px;
-  }
-}
+/* .ImageModal.active .modal-content {
+  animation: scaleUp 0.5s ease forwards;
+} */
 
 .close:hover,
 .close:focus {
-  color: #bbbbbb;
-  text-decoration: none;
+  color: #e0e0e0;
   cursor: pointer;
-  transform: rotate(90deg);
-  /* A subtle rotation effect for the close icon */
+  transform: rotate(90deg) scale(1.2);
 }
 
-.workIMG:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
+#img01 {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* @keyframes scaleUp {
+  0% { transform: scale(0.8) translateY(-50px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+} */
+
+/* Responsive Design Adjustments */
+@media (min-width: 240px) {
+  .modal-content { max-width: 95%; } /* Allow more width on smaller screens */
+}
+@media (min-width: 768px) {
+  .modal-content { max-width: 85%; } /* Adjust for medium screens */
+}
+@media (min-width: 1024px) {
+  .modal-content { max-width: 75%; } /* Adjust for larger screens */
+}
+@media (min-width: 1280px) {
+  .modal-content { max-width: 65%; } /* Adjust for extra large screens */
 }

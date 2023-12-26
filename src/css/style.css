@@ -3,6 +3,7 @@
 @import url("slider.css");
 @import url("myportfolio.css");
 @import url("navbar.css");
+@import url("infobox.css");
 
 :root {
   --primary-bg-color: #0a0a0a;
