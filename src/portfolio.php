@@ -106,7 +106,7 @@ include_once './components/navbar.php';
     <div class="container mx-auto p-10">
         <div class="text-center my-20">
             <h1 class="text-4xl font-bold">Meine <span class="text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194]">Grafiken</span> & <span class="text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194]">Projekte</span></h1>
-            <p class="text-gray-300 text-xl mt-4">
+            <p class="text-xl mt-4">
                 Entdecken Sie meine Grafiken und Projekte, die ich in den letzten Jahren erstellt habe.
             </p>
         </div>
@@ -147,7 +147,7 @@ include_once './components/navbar.php';
                 </div>
                 <div class="p-5 mt-auto">
                     <h2 class="text-2xl font-semibold">Thread's</h2>
-                    <p class="text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mt-2">40 Grafiken</p>
+                    <p class="text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mt-2">7 Grafiken</p>
                     <a href="threads.php" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md px-4 py-2 transition duration-300">Ansehen</a>
                 </div>
             </div>
@@ -159,7 +159,7 @@ include_once './components/navbar.php';
                 </div>
                 <div class="p-5 mt-auto">
                     <h2 class="text-2xl font-semibold">Webentwicklung</h2>
-                    <p class="text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mt-2">40 Projekte</p>
+                    <p class="text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mt-2">12 Projekte</p>
                     <a href="threads.php" class="mt-4 inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md px-4 py-2 transition duration-300">Ansehen</a>
                 </div>
             </div>

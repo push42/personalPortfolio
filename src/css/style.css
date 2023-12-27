@@ -113,7 +113,8 @@ body.dark-mode .statsbox,
 body.dark-mode .currentProjectsbox,
 body.dark-mode .myWorkBox,
 body.dark-mode .aboutMeBox,
-body.dark-mode .simpleSlider {
+body.dark-mode .simpleSlider,
+body.dark-mode .portfolio-item {
   background: var(--dark-mode-bg);
   border-color: var(--box-border-color);
   box-shadow: 0 0 5px var(--box-shadow-color-light);
@@ -419,46 +420,30 @@ body.dark-mode .progressBar2 {
 /* Individual social media button styles */
 .profile-button.github:hover {
   transform: translateY(-5px);
-  /* Add hover animation */
   color: #6cc644;
-  /* Change color on hover */
   border-color: #6cc644;
-  /* Change border color on hover */
   background-color: transparent;
-  /* Change background color on hover */
 }
 
 .profile-button.facebook:hover {
   transform: translateY(-5px);
-  /* Add hover animation */
   color: #1877F2;
-  /* Change color on hover */
   border-color: #1877F2;
-  /* Change border color on hover */
   background-color: transparent;
-  /* Change background color on hover */
 }
 
 .profile-button.steam:hover {
   transform: translateY(-5px);
-  /* Add hover animation */
   color: #0088cc;
-  /* Change color on hover */
   border-color: #0088cc;
-  /* Change border color on hover */
   background-color: transparent;
-  /* Change background color on hover */
 }
 
 .profile-button.discord:hover {
   transform: translateY(-5px);
-  /* Add hover animation */
   color: #7289da;
-  /* Change color on hover */
   border-color: #7289da;
-  /* Change border color on hover */
   background-color: transparent;
-  /* Change background color on hover */
 }
 
 .grid {
@@ -696,19 +681,6 @@ body.dark-mode .progressBar2 {
   height: 100%;
   object-fit: cover;
   z-index: -2;
-}
-
-.parallax-bg {
-  background-image: url("../assets/images/stars.png");
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-attachment: fixed;
-  background-size: cover;
-  z-index: -1;
-  opacity: 0.5;
 }
 
 .content {
@@ -1048,13 +1020,6 @@ footer h5::after {
 }
 
 
-/* @media (max-width: 1090px) {
-  .radioSlider {
-    display: none;
-  }
-} */
-
-
 .kofidonation {
   cursor: pointer;
 }
@@ -1065,11 +1030,26 @@ footer h5::after {
 }
 
 
-/* .resumeIMG {
-  filter: grayscale(100%);
-} */
-
-
 .contactFormModal {
   z-index: 99999;
+}
+
+
+
+@media (max-width: 1190px) {
+  #clockContainer, .clock-container {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1190px) {
+  #toggleSnowContainer, .toggle-snow-container {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1190px) {
+  #siteVisiters {
+    display: none !important;
+  }
 }

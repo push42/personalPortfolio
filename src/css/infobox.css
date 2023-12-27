@@ -1,15 +1,14 @@
 /* Custom CSS for additional styling */
 .profile-card {
-    background: linear-gradient(45deg, #0a0a0a83, rgba(50, 50, 51, 0.8));
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
+    background: linear-gradient(45deg, #0a0a0a10, rgba(50, 50, 51, 0.1));
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border-radius: 1rem;
     transition: transform 0.3s ease-in-out;
 }
 
 .profile-card:hover {
     transform: translateY(-10px);
-    background: linear-gradient(135deg, rgba(108, 117, 223, 0.8), rgba(211, 85, 128, 0.8));
 }
 
 .worklink-box {
@@ -24,13 +23,24 @@
     100% { background-position: 0 0; }
 }
 
-.contact-btn {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    transition: all 0.3s ease-in-out;
+.matrix-background {
+    position: relative;
+    overflow: hidden;
 }
 
-.contact-btn:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+#matrixCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background: linear-gradient(to right, #1b1b1b, #c471ed, #974ff6); /* Gradient background */
 }
+
+.content {
+    position: relative;
+    z-index: 2;
+    /* Your existing styles for content */
+}
+

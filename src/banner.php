@@ -101,14 +101,14 @@ require '../vendor/autoload.php';
 
 
 
-    <div id="myModal" class="ImageModal hidden fixed inset-0 z-10 overflow-auto bg-black bg-opacity-60 backdrop-blur">
-        <div class="modal-content mx-auto p-6 bg-gardient-to-r from-white via-gray-100 to-zinc-300 bg-opacity-80 rounded-2xl shadow-lg max-w-4xl">
-            <span class="close absolute top-3 right-3 text-gray-200 text-3xl font-semibold cursor-pointer hover:text-gray-400">&times;</span>
-
-            <div class="text-xl font-semibold text-white mb-2 text-center">Vorschau</div>
-            <img id="img01" class="mx-auto my-4 max-w-full h-auto rounded-lg shadow-sm">
+    <!-- ========= Image Preview Modal (Clicked on Image) ========= -->
+    <div id="myModal" class="ImageModal hidden fixed inset-0 z-10 overflow-auto bg-black bg-opacity-70 backdrop-blur-md">
+        <div class="modal-content mx-auto p-6 bg-gradient-to-bl from-zinc-900 to-black rounded-3xl shadow-2xl max-w-6xl flex items-center justify-center relative">
+            <span class="close absolute top-1 right-2 text-white text-3xl font-semibold cursor-pointer hover:text-gray-500">&times;</span>
+            <img id="img01" class="mx-auto my-4 max-w-full h-auto rounded-lg shadow-lg transition-all duration-300 ease-in-out">
         </div>
     </div>
+    <!-- ========= Image Preview Modal End ========= -->
 
 
 

@@ -101,14 +101,14 @@ require '../vendor/autoload.php';
 
 
 
-    <div id="myModal" class="ImageModal hidden fixed inset-0 z-10 overflow-auto bg-black bg-opacity-60 backdrop-blur">
-        <div class="modal-content mx-auto p-6 bg-gardient-to-r from-white via-gray-100 to-zinc-300 bg-opacity-80 rounded-2xl shadow-lg max-w-4xl">
-            <span class="close absolute top-3 right-3 text-gray-200 text-3xl font-semibold cursor-pointer hover:text-gray-400">&times;</span>
-
-            <div class="text-xl font-semibold text-white mb-2 text-center">Vorschau</div>
-            <img id="img01" class="mx-auto my-4 max-w-full h-auto rounded-lg shadow-sm">
+    <!-- ========= Image Preview Modal (Clicked on Image) ========= -->
+    <div id="myModal" class="ImageModal hidden fixed inset-0 z-10 overflow-auto bg-black bg-opacity-70 backdrop-blur-md">
+        <div class="modal-content mx-auto p-6 bg-gradient-to-bl from-zinc-900 to-black rounded-3xl shadow-2xl max-w-6xl flex items-center justify-center relative">
+            <span class="close absolute top-1 right-2 text-white text-3xl font-semibold cursor-pointer hover:text-gray-500">&times;</span>
+            <img id="img01" class="mx-auto my-4 max-w-full h-auto rounded-lg shadow-lg transition-all duration-300 ease-in-out">
         </div>
     </div>
+    <!-- ========= Image Preview Modal End ========= -->
 
 
 
@@ -210,11 +210,89 @@ require '../vendor/autoload.php';
                                 </button>
                             </div>
                             <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                                    <i class="fa fa-github text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
-                                    Source Code
+                                <button onclick="window.location.href='https://trap-life.de'" class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                                    <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
+                                    Live Preview Website
                                 </button>
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:flex">
+                        <div class="portImage relative">
+                            <a href="#none">
+                                <i class="fa-solid fa-up-right-and-down-left-from-center absolute top-4 right-4 z-50"></i>
+                                <img class="object-cover w-full h-56 rounded-lg lg:w-64 workIMG" src="./assets/work/websites/partyservice.png" alt="">
+                            </a>
+                        </div>
+                        <div class="flex flex-col py-6 lg:mx-6">
+                            <a href="#" class="text-xl font-semibold text-gray-800 dark:text-white ">
+                                <span class="text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194]">Partyservice</span>
+                                Schmidt
+                            </a>
+                            <span class="text-sm text-gray-500 dark:text-gray-300 mb-2 myWorkDescription">Catering Service</span>
+                            <div class="buttonSpacerText mb-2 mt-1 text-sm font-semibold text-gray-300">Verwendete Sprachen
+                            </div>
+                            <!-- component -->
+                            <div class="flex">
+                                <!-- <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-900 to-yellow-400 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-yellow-500/20 transition-all hover:shadow-lg hover:yellow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                        <img src="./assets/images/js.png" alt="" class="w-6 h-6">
+                                    </button> -->
+                                <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-orange-500/20 transition-all hover:shadow-lg hover:orange-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                    <img src="./assets/images/html.png" alt="" class="w-6 h-6">
+                                </button>
+                                <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-300/20 transition-all hover:shadow-lg hover:blue-pink-300/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                    <img src="./assets/images/css.png" alt="" class="w-6 h-6">
+                                </button>
+                                <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-yellow-500/20 transition-all hover:shadow-lg hover:yellow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                    <img src="./assets/images/js.png" alt="" class="w-6 h-6">
+                                </button>
+                                <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-purple-500/20 transition-all hover:shadow-lg hover:purple-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                    <img src="./assets/images/php.png" alt="" class="w-6 h-6">
+                                </button>
+                            </div>
+                            <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
+                                <button onclick="window.location.href='https://schmidt-partyservice.de'" class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                                    <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
+                                    Live Preview Website
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:flex">
+                        <div class="portImage relative">
+                            <a href="#none">
+                                <i class="fa-solid fa-up-right-and-down-left-from-center absolute top-4 right-4 z-50"></i>
+                                <img class="object-cover w-full h-56 rounded-lg lg:w-64 workIMG" src="./assets/work/websites/partyservice_dashboard.png" alt="">
+                            </a>
+                        </div>
+                        <div class="flex flex-col py-6 lg:mx-6">
+                            <a href="#" class="text-xl font-semibold text-gray-800 dark:text-white ">
+                                <span class="text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194]">Partyservice</span>
+                                Schmidt
+                            </a>
+                            <span class="text-sm text-gray-500 dark:text-gray-300 mb-2 myWorkDescription">Dashboard</span>
+                            <div class="buttonSpacerText mb-2 mt-1 text-sm font-semibold text-gray-300">Verwendete Sprachen
+                            </div>
+                            <!-- component -->
+                            <div class="flex">
+                                <!-- <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-900 to-yellow-400 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-yellow-500/20 transition-all hover:shadow-lg hover:yellow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                        <img src="./assets/images/js.png" alt="" class="w-6 h-6">
+                                    </button> -->
+                                <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-orange-500/20 transition-all hover:shadow-lg hover:orange-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                    <img src="./assets/images/html.png" alt="" class="w-6 h-6">
+                                </button>
+                                <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-300/20 transition-all hover:shadow-lg hover:blue-pink-300/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                    <img src="./assets/images/css.png" alt="" class="w-6 h-6">
+                                </button>
+                                <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-yellow-500/20 transition-all hover:shadow-lg hover:yellow-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                    <img src="./assets/images/js.png" alt="" class="w-6 h-6">
+                                </button>
+                                <button class="middle none center mr-4 flex items-center justify-center rounded-lg bg-gradient-to-tr from-zinc-500 to-zinc-800 p-3 font-sans text-xs font-bold uppercase text-white shadow-md shadow-purple-500/20 transition-all hover:shadow-lg hover:purple-pink-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-light="true">
+                                    <img src="./assets/images/php.png" alt="" class="w-6 h-6">
+                                </button>
+                            </div>
+                            <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
+                                <button onclick="window.location.href='https://admin.schmidt-partyservice.de'" class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
                                     <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
                                     Live Preview Website
                                 </button>
@@ -253,14 +331,6 @@ require '../vendor/autoload.php';
                                 </button>
                             </div>
                             <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                                    <i class="fa fa-github text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
-                                    Source Code
-                                </button>
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                                    <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
-                                    Live Preview Website
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -296,11 +366,7 @@ require '../vendor/autoload.php';
                                 </button>
                             </div>
                             <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                                    <i class="fa fa-github text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
-                                    Source Code
-                                </button>
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                                <button onclick="window.location.href='https://roguev.de'" class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
                                     <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
                                     Live Preview Website
                                 </button>
@@ -342,11 +408,11 @@ require '../vendor/autoload.php';
                                 </button>
                             </div>
                             <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                                <button onclick="window.location.href='https://github.com/push42/fivem_dashboard'" class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
                                     <i class="fa fa-github text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
                                     Source Code
                                 </button>
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                                <button onclick="window.location.href='https://dashboard.roguev.de'" class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
                                     <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
                                     Live Preview Website
                                 </button>
@@ -388,11 +454,11 @@ require '../vendor/autoload.php';
                                 </button>
                             </div>
                             <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                                <button onclick="window.location.href='https://github.com/push42/scriptshop_5m'" class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
                                     <i class="fa fa-github text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
                                     Source Code
                                 </button>
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
+                                <button onclick="window.location.href='https://shop.push42.de'" class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
                                     <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
                                     Live Preview Website
                                 </button>
@@ -431,14 +497,6 @@ require '../vendor/autoload.php';
                                 </button>
                             </div>
                             <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                                    <i class="fa fa-github text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
-                                    Source Code
-                                </button>
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                                    <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
-                                    Live Preview Website
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -527,14 +585,6 @@ require '../vendor/autoload.php';
                                 </button>
                             </div>
                             <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                                    <i class="fa fa-github text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
-                                    Source Code
-                                </button>
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                                    <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
-                                    Live Preview Website
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -570,14 +620,6 @@ require '../vendor/autoload.php';
                                 </button>
                             </div>
                             <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                                    <i class="fa fa-github text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
-                                    Source Code
-                                </button>
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                                    <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
-                                    Live Preview Website
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -613,14 +655,6 @@ require '../vendor/autoload.php';
                                 </button>
                             </div>
                             <div class="rounded-lg mt-2 flex-col col-span-1 space-x-0">
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                                    <i class="fa fa-github text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
-                                    Source Code
-                                </button>
-                                <button class="flex background-transparent font-medium uppercase py-2 text-xs outline-none focus:outline-none mr-1 ease-linear transition-all duration-150" type="button">
-                                    <i class="fas fa-home text-transparent bg-clip-text bg-gradient-to-tr from-[#8088f8] to-[#e67194] mr-1"></i>
-                                    Live Preview Website
-                                </button>
                             </div>
                         </div>
                     </div>
